@@ -1,32 +1,36 @@
 public class MySwitch {
-
+    public enum Season {
+        WINTER, SPRING, SUMMER, AUTUMN
+    }
+    
     public static void main(String[] args) {
-        String month = "JuLy";
+        Season season = Season.WINTER;
+        String month = "may";
         switch (month.toLowerCase()) {
             case "december":
             case "january":
             case "february":
-                System.out.println("Winter");
+                season = Season.WINTER;
                 break;
             case "march":
             case "april":
             case "may":
-                System.out.println("Spring");
+                season = Season.SPRING;
                 break;
             case "june":
             case "july":
             case "august":
-                System.out.println("Summer");
+                season = Season.SUMMER;
                 break;
             case "september":
             case "october":
             case "november":
-                System.out.println("Autumn");
+                season = Season.AUTUMN;
             default:
-                System.out.println("Enter right month e.g.: May");
-
+                System.out.println("Enter right month");
 
         }
+        System.out.println(season);
     }
 
 }
