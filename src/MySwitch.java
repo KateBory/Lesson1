@@ -32,6 +32,7 @@ public class MySwitch {
             case "october":
             case "november":
                 season = Season.AUTUMN;
+                break;
             default:
                 System.out.println("No this month");
 
