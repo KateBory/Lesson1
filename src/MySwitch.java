@@ -1,11 +1,17 @@
+import java.util.Scanner;
+
 public class MySwitch {
     public enum Season {
         WINTER, SPRING, SUMMER, AUTUMN
     }
-    
+
     public static void main(String[] args) {
-        Season season = Season.WINTER;
-        String month = "may";
+        System.out.println("Enter month");
+        Scanner str = new Scanner(System.in);
+        String month = str.nextLine();
+
+        Season season = null;
+
         switch (month.toLowerCase()) {
             case "december":
             case "january":
@@ -27,10 +33,11 @@ public class MySwitch {
             case "november":
                 season = Season.AUTUMN;
             default:
-                System.out.println("Enter right month");
+                System.out.println("No this month");
 
         }
-        System.out.println(season);
+        if (season != null)
+            System.out.println(season);
     }
 
 }
